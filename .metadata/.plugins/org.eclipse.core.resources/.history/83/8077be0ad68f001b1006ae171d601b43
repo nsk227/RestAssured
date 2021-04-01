@@ -1,0 +1,82 @@
+package StepDefinations;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class reqresStepDefinitions {
+	RequestSpecification httpRequest = null;
+    Response response = null;
+    ValidatableResponse json =null;
+	
+	@Given("^Set the Parameter to page as (\\d+)$")
+	public void set_the_Parameter_to_page_as(int arg1) throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+		RestAssured.baseURI = "https://reqres.in";
+        httpRequest = RestAssured.given();
+        httpRequest.given().param("page", "2");
+	   
+	}
+
+	@When("^Perform Get Operation to get the list of users$")
+	public void perform_Get_Operation_to_get_the_list_of_users() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the status code$")
+	public void verify_the_status_code() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the Response Header Content-Type$")
+	public void verify_the_Response_Header_Content_Type() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the Response Header server$")
+	public void verify_the_Response_Header_server() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the Response Header content-encoding$")
+	public void verify_the_Response_Header_content_encoding() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the Response Body for Page$")
+	public void verify_the_Response_Body_for_Page() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
+	@Then("^Verify the data id of the first user$")
+	public void verify_the_data_id_of_the_first_user() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the data email of the first user$")
+	public void verify_the_data_email_of_the_first_user() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+	@Then("^Verify the support url of the  first user$")
+	public void verify_the_support_url_of_the_first_user() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    
+	}
+
+
+
+}

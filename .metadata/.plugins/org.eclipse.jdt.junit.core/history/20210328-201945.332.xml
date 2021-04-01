@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="RestAssuredCucumber_Assessment" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="TestRunners.TestRunner" time="1.512">
+    <testsuite name="Feature: Verify all reqres.in Requests for GEt, POST, PUT and Delete Operations" time="1.512">
+      <testcase name="Verify the Get List of Users Request" classname="Verify all reqres.in Requests for GEt, POST, PUT and Delete Operations" time="1.512">
+        <skipped>cucumber.runtime.junit.UndefinedThrowable: The step "Perform Get Operation  with relative url "/api/users" to get the list of users" is undefined
+
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

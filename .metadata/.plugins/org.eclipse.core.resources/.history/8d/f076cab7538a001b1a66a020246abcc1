@@ -1,0 +1,40 @@
+package com.reqres.testcases;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+public class Reqres_Requests {
+    RequestSpecification httpRequest = null;
+    Response response = null;
+    
+    @BeforeMethod
+    public void InitializeRequestURL() {
+        RestAssured.baseURI = "https://reqres.in";
+        httpRequest = RestAssured.given();
+    }
+    
+    @Test(priority=0)
+    public void GetSingleUser() {
+        response = httpRequest.get("/api/users/2");
+        System.out.println("Response Code = " + response.statusCode());
+        System.out.println("Status Line = " + response.getStatusLine());
+        System.out.println("Response Body = " + response.body().asString());
+        JsonPath js=response.jsonPath();
+        System.out.println("Get id = "+js.getByte("data.id"));
+        System.out.println("Get email = "+js.getByte("data.email"));
+        
+    }
+    @Test
+    (priority=1)
+    public void GetListOfUsers() {
+        response  = httpRequest.get("/api/users?page=2");
+        System.out.println("Response Code = " + response.statusCode());
+        System.out.println("Status Line = " + response.getStatusLine());
+        System.out.println("Response Body = " + response.body().asString());        
+    }
+
+    
+    
+}

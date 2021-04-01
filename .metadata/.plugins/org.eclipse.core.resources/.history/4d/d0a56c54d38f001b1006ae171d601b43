@@ -1,0 +1,12 @@
+Feature: Verify all reqres.in Request for GET, POST,PUT and DELETE
+Scenario: Verify the Get List of Users Request
+Given  Set the Parameter to page as 2
+When Perform Get Operation to get the list of users
+Then Verify the status code 
+And Verify the Response Header Content-Type
+And Verify the Response Header server
+And Verify the Response Header content-encoding
+And Verify the Response Body for Page
+And Verify the id of the first user
+And Verify the email of the first user
+And Verify the supporturl of the  first user

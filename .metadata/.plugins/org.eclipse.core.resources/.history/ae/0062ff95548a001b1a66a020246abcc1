@@ -1,0 +1,44 @@
+package com.reqres.testcases;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+public class Reqres_Requests {
+    RequestSpecification httpRequest = null;
+    Response response = null;
+    
+    @BeforeMethod
+    public void InitializeRequestURL() {
+        RestAssured.baseURI = "https://reqres.in";
+        httpRequest = RestAssured.given();
+    }
+    
+    @Test(priority=0)
+    public void GetSingleUser() {
+        response = httpRequest.get("/api/users/2");
+        System.out.println("Response Code = " + response.statusCode());
+        System.out.println("Status Line = " + response.getStatusLine());
+        System.out.println("Response Body = " + response.body().asString());
+        JsonPath js=response.jsonPath();
+        System.out.println("Get id = "+js.get("data.id"));
+        System.out.println("Get email = "+js.get("data.email"));
+        System.out.println("Get first_name = "+js.get("data.first_name"));
+        System.out.println("Get last_name = "+js.get("data.last_name"));
+        System.out.println("Get avatar = "+js.get("data.avatar"));
+        System.out.println("Get text = "+js.get("data.text"));
+        System.out.println("Get url = "+js.get("data.url"));
+    }
+    @Test
+    (priority=1)
+    public void GetListOfUsers() {
+        response  = httpRequest.get("/api/users?page=2");
+        System.out.println("Response Code = " + response.statusCode());
+        System.out.println("Status Line = " + response.getStatusLine());
+        System.out.println("Response Body = " + response.body().asString());        
+    }
+
+    
+    
+}

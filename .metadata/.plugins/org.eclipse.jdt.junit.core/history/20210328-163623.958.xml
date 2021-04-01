@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="RestAssuredCucumberMar20" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="TestRunners.TestRunner" time="2.251">
+    <testsuite name="Feature: Verify all reqres.in Requests for GEt, POST, PUT and Delete Operations" time="2.251">
+      <testcase name="Verify the Get List of Users Request" classname="Verify all reqres.in Requests for GEt, POST, PUT and Delete Operations" time="2.247"/>
+      <testcase name="Verify the Get Single User Request" classname="Verify all reqres.in Requests for GEt, POST, PUT and Delete Operations" time="0.004">
+        <skipped>cucumber.runtime.junit.UndefinedThrowable: The step "The Request End Point is "https://reqres.in"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Perform Get Operation  with relative url "/api/users/2" to get the list of users" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Status Code 200" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Header Content-Type "application/json; charset=utf-8"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Header Server "cloudflare"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Header Content-Encoding "gzip"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for data id 2" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for data email "janet.weaver@reqres.in"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for data first_name "Janet"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for data last_name "Weaver"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for data avatar "https://reqres.in/img/faces/2-image.jpg"" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for support url "To keep ReqRes free, contributions towards server costs are appreciated!"" is undefined
+
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

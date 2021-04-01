@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="RestAssuredCucumberMar20" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="TestRunners.TestRunner" time="0.0">
+    <testsuite name="Feature: Verify all reqres.in Request for GET, POST,PUT and DELETE" time="0.0">
+      <testcase name="Verify the Get List of Users Request" classname="Verify all reqres.in Request for GET, POST,PUT and DELETE" time="0.0">
+        <skipped>cucumber.runtime.junit.UndefinedThrowable: The step "Set the Parameter to page as 2" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Perform Get Operation to get the list of users" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the status code" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Header Content-Type" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Header server" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Header content-encoding" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the Response Body for Page" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the data id of the first user" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the data email of the first user" is undefined
+
+cucumber.runtime.junit.UndefinedThrowable: The step "Verify the support url of the  first user" is undefined
+
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
